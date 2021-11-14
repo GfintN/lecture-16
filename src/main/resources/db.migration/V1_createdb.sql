@@ -1,0 +1,3 @@
+CREATE DATABASE animals
+    WITH
+    ENCODING = 'UTF8';
