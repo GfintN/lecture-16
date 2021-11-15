@@ -16,9 +16,10 @@ public class Dog implements Serializable {
     @Id
     @GeneratedValue
     private Integer id;
-    @Column
+    @Column(nullable = false)
     private Integer age;
-    @Column
+    @Column(nullable = false)
     private String name;
-
+    @Column(nullable = false)
+    private String breed;
 }

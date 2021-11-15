@@ -5,21 +5,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "cats")
+@Table(name = "cats_breeds")
 @Entity
-public class Cat implements Serializable {
+public class CatBreed {
     @Id
     @GeneratedValue
     private Integer id;
-    @Column(nullable = false)
-    private Integer age;
-    @Column(nullable = false)
-    private String name;
     @Column(nullable = false)
     private String breed;
 }
