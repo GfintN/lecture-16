@@ -14,7 +14,7 @@ import javax.persistence.*;
 public class CatBreed {
     @Id
     @GeneratedValue
-    private Integer id;
+    private Long id;
     @Column(nullable = false)
     private String breed;
 }

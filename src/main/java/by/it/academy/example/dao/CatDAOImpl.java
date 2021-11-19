@@ -1,6 +1,7 @@
 package by.it.academy.example.dao;
 
 import by.it.academy.example.pojo.Cat;
+import by.it.academy.example.pojo.CatBreed;
 import by.it.academy.example.util.HibernateUtil;
 import org.hibernate.HibernateException;
 
@@ -32,6 +33,7 @@ public class CatDAOImpl implements AnimalDAO<Cat> {
     @Override
     public Cat find(int id) {
         cat = new Cat();
+        em = HibernateUtil.getEntityManager();
         try {
         em.getTransaction().begin();
         cat = em.find(Cat.class, id);
@@ -45,4 +47,5 @@ public class CatDAOImpl implements AnimalDAO<Cat> {
             em.close();
         }
     }
+
 }

@@ -20,4 +20,9 @@ public class FlyWayMigration {
         flyway = Flyway.configure().dataSource((DataSource) session).initSql(sql).load();
         flyway.migrate();
     }
+
+    public void clean(){
+        flyway.clean();
+    }
 }
+

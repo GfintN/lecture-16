@@ -1,4 +1,4 @@
-Home task #16
+<h3>Home task #16</h3>
 1. Git repo
 2. README file with rules from lecture
 3. create new maven/gradle project
@@ -8,3 +8,5 @@ Home task #16
 7. Configure POJO mapping with JPA annotations
 8. Create DAO (use EntityManager) for POJOs with 2 method: save(pojo) and find(id)
 9. Tests
+
+<h6>FlyWayTest and HibernateUtilTest don't gob </h6>

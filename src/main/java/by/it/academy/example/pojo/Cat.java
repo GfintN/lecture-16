@@ -15,7 +15,7 @@ import java.io.Serializable;
 public class Cat implements Serializable {
     @Id
     @GeneratedValue
-    private Integer id;
+    private Long id;
     @Column(nullable = false)
     private Integer age;
     @Column(nullable = false)

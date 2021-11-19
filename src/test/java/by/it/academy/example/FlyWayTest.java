@@ -15,7 +15,7 @@ public class FlyWayTest {
 
     @BeforeAll
     static void generateContainer(){
-        DockerImageName myImage = DockerImageName.parse("gfintn/my-postgres:version.1").asCompatibleSubstituteFor("postgres");
+        DockerImageName myImage = DockerImageName.parse("postgres");
         PostgreSQLContainer postgreSQLContainer = new PostgreSQLContainer(myImage);
         postgreSQLContainer.addExposedPort(5432);
         postgreSQLContainer.start();
@@ -37,12 +37,14 @@ public class FlyWayTest {
     @Test
     public void testInitSqlAndMigrationFlyway(){
         Assertions.assertDoesNotThrow(()-> {
-            flyway.initSqlAndMigrationFlyway("SELECT * FROM jdbc_test;");
+            flyway.initSqlAndMigrationFlyway("SELECT breed FROM cats_breeds;");
         });
     }
 
     @Test
     public void testFlywayOnDAO(){
-        FlyWayTest.flywayPostgresqlContainer.initSqlAndMigrationFlyway("SELECT * FROM jdbc_test;");
+        FlyWayTest.flywayPostgresqlContainer.initSqlAndMigrationFlyway("SELECT name FROM cats;");
     }
+
+
 }

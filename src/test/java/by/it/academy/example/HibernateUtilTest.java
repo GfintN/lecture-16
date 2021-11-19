@@ -3,8 +3,8 @@ package by.it.academy.example;
 import by.it.academy.example.util.HibernateUtil;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
 import javax.persistence.EntityManager;
+
 
 public class HibernateUtilTest {
 
@@ -14,7 +14,11 @@ public class HibernateUtilTest {
         Assertions.assertAll(
                 () -> Assertions.assertNotNull(em),
                 () ->  {HibernateUtil.close();
-                Assertions.assertNull(em);}
+                Assertions.assertNull(em);
+                    if (em != null) {
+                        em.close();
+                    }
+                }
         );
     }
 }

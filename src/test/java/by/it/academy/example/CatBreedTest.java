@@ -1,7 +1,7 @@
 package by.it.academy.example;
 
 import by.it.academy.example.dao.AnimalDAO;
-import by.it.academy.example.dao.CatDAOImpl;
+import by.it.academy.example.dao.CatBreedDAOImpl;
 import by.it.academy.example.pojo.CatBreed;
 import by.it.academy.example.util.HibernateUtil;
 import org.junit.jupiter.api.AfterAll;
@@ -17,7 +17,7 @@ public class CatBreedTest {
 
     @BeforeEach
     void initAnimalDAO(){
-        dao = mock(CatDAOImpl.class);
+        dao = mock(CatBreedDAOImpl.class);
         cat = mock(CatBreed.class);
     }
 
