@@ -9,6 +9,7 @@
 <p>8. Create DAO (use EntityManager) for POJOs with 2 method: save(pojo) and find(id)</p>
 <p>9. Tests</p>
 
+* mvn package
 * docker-compose up -d
 * mvn flyway:migrate
-* mvn package
+
