@@ -8,5 +8,3 @@
 7. Configure POJO mapping with JPA annotations
 8. Create DAO (use EntityManager) for POJOs with 2 method: save(pojo) and find(id)
 9. Tests
-
-<h6>FlyWayTest and HibernateUtilTest don't gob </h6>
