@@ -12,13 +12,13 @@ public class CatBreedDAOImpl implements AnimalDAO<CatBreed>{
 
     @Override
     public CatBreed sava(CatBreed pojo) {
-        cat = new CatBreed();
+       
         em = HibernateUtil.getEntityManager();
         try {
             em.getTransaction().begin();
-            em.persist(cat);
+            em.persist(pojo);
             em.getTransaction().commit();
-            return cat;
+            return pojo;
         } catch (HibernateException ignore) {
             em.getTransaction().rollback();
             return null;
