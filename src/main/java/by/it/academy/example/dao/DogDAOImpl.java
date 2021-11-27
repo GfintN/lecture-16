@@ -13,13 +13,13 @@ public class DogDAOImpl implements AnimalDAO<Dog> {
 
     @Override
     public Dog sava(Dog pojo) {
-        dog = new Dog();
+       
         em = HibernateUtil.getEntityManager();
         try {
             em.getTransaction().begin();
-            em.persist(dog);
+            em.persist(pojo);
             em.getTransaction().commit();
-            return dog;
+            return pojo;
         } catch (HibernateException ignore) {
             em.getTransaction().rollback();
             return null;
